@@ -8,6 +8,7 @@ import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 import {Tasks} from 'components/Tasks/Tasks.jsx';
 import {
     dataPie,
+    pieOptions,
     legendPie,
     dataSales,
     optionsSales,
@@ -86,7 +87,11 @@ class Dashboard extends Component {
                                 stats="Campaign sent 2 days ago"
                                 content={
                                     <div id="chartPreferences" className="ct-chart ct-perfect-fourth">
-                                        <ChartistGraph data={dataPie} type="Pie"/>
+                                        <ChartistGraph 
+                                            data={dataPie} 
+                                            type="Pie"
+                                            options={pieOptions}
+                                        />
                                     </div>
                                 }
                                 legend={

@@ -481,6 +481,13 @@ var dataPie = {
     labels: ['40%','20%','40%'],
     series: [40, 20, 40]
 };
+var pieOptions = {
+    donut: true,
+    donutWidth: 50,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+}
 var legendPie = {
     names: ["Open","Bounce","Unsubscribe"],
     types: ["info","danger","warning"]
@@ -559,5 +566,5 @@ module.exports = {
     style, // For notifications (App container and Notifications view)
     thArray, tdArray, // For tables (TableList view)
     iconsArray, // For icons (Icons view)
-    dataPie, legendPie, dataSales, optionsSales, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
+    dataPie, pieOptions, legendPie, dataSales, optionsSales, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
 };
