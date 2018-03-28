@@ -78,6 +78,10 @@
 @media (max-width: 991px){
     .main-panel{
         width: 100%;
+        > .content{
+            padding: 30px 15px;
+            min-height: calc(100% - 123px);
+        }
     }
     .navbar-transparent{
         padding-top: 15px;
