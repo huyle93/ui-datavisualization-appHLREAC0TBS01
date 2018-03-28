@@ -41,9 +41,9 @@ class Dashboard extends Component {
                     <Row>
                         <Col lg={3} sm={6}>
                             <StatsCard
-                                bigIcon={<i className="pe-7s-server text-warning"></i>}
-                                statsText="Capacity"
-                                statsValue="105GB"
+                                bigIcon={<i className="pe-7s-share text-warning"></i>}
+                                statsText="Recommended Attorney"
+                                statsValue="Collette Powers"
                                 statsIcon={<i className="fa fa-refresh"></i>}
                                 statsIconText="Updated now"
                             />
@@ -88,7 +88,7 @@ class Dashboard extends Component {
                                     <div className="ct-chart">
                                         <ChartistGraph
                                             data={dataSales}
-                                            type="Line"
+                                            type="Bar"
                                             options={optionsSales}
                                             responsiveOptions={responsiveSales}
                                         />

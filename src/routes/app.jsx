@@ -8,7 +8,7 @@ import Notifications from 'views/Notifications/Notifications';
 import Upgrade from 'views/Upgrade/Upgrade';
 
 const appRoutes = [
-    { path: "/dashboard", name: "Dashboard", icon: "pe-7s-graph", component: Dashboard },
+    { path: "/dashboard", name: "Attorney Insight", icon: "pe-7s-graph", component: Dashboard },
     { path: "/user", name: "User Profile", icon: "pe-7s-user", component: UserProfile },
     { path: "/table", name: "Table List", icon: "pe-7s-note2", component: TableList },
     { path: "/typography", name: "Typography", icon: "pe-7s-news-paper", component: Typography },
