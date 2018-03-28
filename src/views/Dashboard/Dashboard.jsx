@@ -6,6 +6,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import {Card} from 'components/Card/Card.jsx';
 import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 import {Tasks} from 'components/Tasks/Tasks.jsx';
+import { AttorneyTable } from 'components/Table/Table.jsx';
 import {
     dataPie,
     pieOptions,
@@ -129,7 +130,8 @@ class Dashboard extends Component {
 
                     <Row>
                         <Col md={6}>
-                            <Card
+                            <AttorneyTable />
+                            {/* <Card
                                 id="chartActivity"
                                 title="2014 Sales"
                                 category="All products including Taxes"
@@ -150,7 +152,7 @@ class Dashboard extends Component {
                                         {this.createLegend(legendBar)}
                                     </div>
                                 }
-                            />
+                            /> */}
                         </Col>
 
                         <Col md={6}>
