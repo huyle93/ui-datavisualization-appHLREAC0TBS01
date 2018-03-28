@@ -7,8 +7,8 @@ import {
 import NotificationSystem from 'react-notification-system';
 
 import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import Sidebar from 'components/Sidebar/Sidebar';
+/* import Footer from 'components/Footer/Footer'; */
+/* import Sidebar from 'components/Sidebar/Sidebar'; */
 
 import {style} from "variables/Variables.jsx";
 
@@ -97,7 +97,7 @@ class App extends Component {
 
                 <div className="wrapper">
                     <NotificationSystem ref="notificationSystem" style={style}/>
-                    <Sidebar {...this.props} />
+                    
                     <div id="main-panel" className="main-panel">
                         <Header {...this.props}/>
                             <Switch>
@@ -125,7 +125,6 @@ class App extends Component {
                                     })
                                 }
                             </Switch>
-                        <Footer />
                     </div>
                 </div>
         );
