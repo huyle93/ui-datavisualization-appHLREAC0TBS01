@@ -20,6 +20,7 @@ import {
     responsiveBar,
     legendBar
 } from 'variables/Variables.jsx';
+import axios from 'axios';
 
 class Dashboard extends Component {
     createLegend(json){
@@ -36,6 +37,23 @@ class Dashboard extends Component {
         }
         return legend;
     }
+
+    // api call for charts
+
+    // state = {
+    //     dataPieAPI: []
+    // }
+
+    // componentDidMount() {
+    //     axios.get('https://jsonplaceholder.typicode.com/users')
+    //     .then(res => {
+    //         const dataPieAPI = res.data;
+    //         this.setState({ dataPieAPI })
+    //       })
+    // }
+
+    // browser rendering
+
     render() {
         return (
             <div className="content">
@@ -131,6 +149,9 @@ class Dashboard extends Component {
                     <Row>
                         <Col md={6}>
                             <AttorneyTable />
+                            {/* <ul key={this.state.dataPieAPI.toString()}>
+                                { this.state.dataPieAPI.map(person => <li>{person.name}</li>)}
+                            </ul> */}
                             {/* <Card
                                 id="chartActivity"
                                 title="2014 Sales"
