@@ -478,8 +478,8 @@ const iconsArray = [
 //
 // Data for Pie Chart
 var dataPie = {
-    labels: ['40%','20%','40%'],
-    series: [40, 20, 40]
+    labels: ['40%','60%'],
+    series: [40, 60]
 };
 var pieOptions = {
     donut: true,
@@ -493,19 +493,19 @@ var legendPie = {
     types: ["info","danger","warning"]
 };
 
-// Data for Line Chart
+// Data and listener animation for Line Chart
 var dataSales = {
   labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
   series: [
-     [287, 385, 490, 492, 554, 586, 698, 695],
-    [67, 152, 143, 240, 287, 335, 435, 437],
-    [23, 113, 67, 108, 190, 239, 307, 308]
+     [287, 385, 490, 492, 554, 586, 698, 695]
+    // [67, 152, 143, 240, 287, 335, 435, 437],
+    // [23, 113, 67, 108, 190, 239, 307, 308]
   ]
 };
 var optionsSales = {
   low: 0,
   high: 800,
-  showArea: false,
+  showArea: true,
   height: "245px",
   axisX: {
     showGrid: false,
@@ -518,6 +518,21 @@ var optionsSales = {
     right: 50
   }
 };
+var listener = {
+    draw: function (data) {
+        if (data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+                d: {
+                    begin: 2000 * data.index,
+                    dur: 2000,
+                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                    to: data.path.clone().stringify(),
+                    easing: [.17,.67,.83,.67]//Chartist.Svg.Easing.easeOutQuint
+                }
+            });
+        }
+    }
+}
 var responsiveSales = [
   ['screen and (max-width: 640px)', {
     axisX: {
@@ -566,5 +581,5 @@ module.exports = {
     style, // For notifications (App container and Notifications view)
     thArray, tdArray, // For tables (TableList view)
     iconsArray, // For icons (Icons view)
-    dataPie, pieOptions, legendPie, dataSales, optionsSales, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
+    dataPie, pieOptions, legendPie, dataSales, optionsSales, listener, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
 };

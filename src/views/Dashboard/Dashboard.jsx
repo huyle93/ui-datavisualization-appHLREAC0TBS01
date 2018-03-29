@@ -13,6 +13,7 @@ import {
     legendPie,
     dataSales,
     optionsSales,
+    listener,
     responsiveSales,
     legendSales,
     dataBar,
@@ -52,7 +53,7 @@ class Dashboard extends Component {
                         </Col>
                         <Col lg={4} sm={6}>
                             <StatsCard
-                                bigIcon={<i className="pe-7s-wallet text-success"></i>}
+                                bigIcon={<i className="pe-7s-refresh-2 text-success"></i>}
                                 statsText="Revenue"
                                 statsValue="$1,345"
                                 statsIcon={<i className="fa fa-calendar-o"></i>}
@@ -89,6 +90,7 @@ class Dashboard extends Component {
                                 content={
                                     <div id="chartPreferences" className="ct-chart ct-perfect-fourth">
                                         <ChartistGraph 
+                                            listener={listener}
                                             data={dataPie} 
                                             type="Pie"
                                             options={pieOptions}
@@ -112,6 +114,7 @@ class Dashboard extends Component {
                                 content={
                                     <div className="ct-chart">
                                         <ChartistGraph
+                                            listener={listener}
                                             data={dataSales}
                                             type="Line"
                                             options={optionsSales}
@@ -130,8 +133,8 @@ class Dashboard extends Component {
 
                     <Row>
                         <Col md={6}>
-                            <AttorneyTable />
-                            {/* <Card
+                            {/* <AttorneyTable /> */}
+                            <Card
                                 id="chartActivity"
                                 title="2014 Sales"
                                 category="All products including Taxes"
@@ -152,7 +155,7 @@ class Dashboard extends Component {
                                         {this.createLegend(legendBar)}
                                     </div>
                                 }
-                            /> */}
+                            />
                         </Col>
 
                         <Col md={6}>
