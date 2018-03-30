@@ -478,15 +478,31 @@ const iconsArray = [
 //
 // Data for Pie Chart
 var dataPie = {
-    labels: ['40%','60%'],
-    series: [40, 60]
+    labels: [
+		'Lose',
+		'Win'
+	],
+	datasets: [{
+		data: [30, 70],
+		backgroundColor: [
+		'#FF6384',
+		'#36A2EB'
+		// '#FFCE56'
+		],
+		hoverBackgroundColor: [
+		'#FF6384',
+		'#36A2EB'
+		// '#FFCE56'
+        ]
+	}]
 };
 var pieOptions = {
-    donut: true,
-    donutWidth: 50,
-    donutSolid: true,
-    startAngle: 270,
-    showLabel: true
+    animation: { animateRotate: true, animateScale: true }
+    // donut: true,
+    // donutWidth: 50,
+    // donutSolid: true,
+    // startAngle: 270,
+    // showLabel: true
 }
 var legendPie = {
     names: ["Open","Bounce","Unsubscribe"],

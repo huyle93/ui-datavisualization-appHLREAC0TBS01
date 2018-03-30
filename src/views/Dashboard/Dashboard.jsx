@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
+import {Doughnut} from 'react-chartjs-2';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 
@@ -81,8 +82,30 @@ class Dashboard extends Component {
                     </Row>
                     {/* CHART */}
                     <Row>
-                        <Col md={4}>
+                        <Col md={7}>
                             <Card
+                                id="chartActivity"
+                                title="2014 Sales"
+                                category="All products including Taxes"
+                                stats="Data information certified"
+                                statsIcon="fa fa-check"
+                                content={
+                                    <div className="ct-chart">
+                                        <ChartistGraph
+                                            data={dataBar}
+                                            type="Bar"
+                                            options={optionsBar}
+                                            responsiveOptions={responsiveBar}
+                                        />
+                                    </div>
+                                }
+                                legend={
+                                    <div className="legend">
+                                        {this.createLegend(legendBar)}
+                                    </div>
+                                }
+                            />
+                            {/* <Card
                                 statsIcon="fa fa-clock-o"
                                 title="Email Statistics"
                                 category="Last Campaign Performance"
@@ -102,9 +125,9 @@ class Dashboard extends Component {
                                         {this.createLegend(legendPie)}
                                     </div>
                                 }
-                            />
+                            /> */}
                         </Col>
-                        <Col md={8}>
+                        <Col md={5}>
                             <Card
                                 statsIcon="fa fa-history"
                                 id="chartHours"
@@ -132,34 +155,20 @@ class Dashboard extends Component {
                     </Row>
 
                     <Row>
-                        <Col md={6}>
-                            {/* <AttorneyTable /> */}
-                            <Card
-                                id="chartActivity"
-                                title="2014 Sales"
-                                category="All products including Taxes"
-                                stats="Data information certified"
-                                statsIcon="fa fa-check"
-                                content={
-                                    <div className="ct-chart">
-                                        <ChartistGraph
-                                            data={dataBar}
-                                            type="Bar"
-                                            options={optionsBar}
-                                            responsiveOptions={responsiveBar}
-                                        />
-                                    </div>
-                                }
-                                legend={
-                                    <div className="legend">
-                                        {this.createLegend(legendBar)}
-                                    </div>
-                                }
-                            />
+                        <Col md={8}>
+                            <AttorneyTable />
                         </Col>
-
-                        <Col md={6}>
-                            <Card
+                        <Col md={4}>
+                            <Card 
+                            statsIcon="fa fa-clock-o"
+                            title="Email Statistics"
+                            category="Last Campaign Performance"
+                            stats="Campaign sent 2 days ago"
+                            content={
+                                <Doughnut data={dataPie} options={pieOptions} />
+                            }
+                            />
+                            {/* <Card
                                 title="Tasks"
                                 category="Backend development"
                                 stats="Updated 3 minutes ago"
@@ -171,7 +180,7 @@ class Dashboard extends Component {
                                         </table>
                                     </div>
                                 }
-                            />
+                            /> */}
                         </Col>
                     </Row>
 
