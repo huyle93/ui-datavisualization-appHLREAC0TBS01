@@ -476,7 +476,7 @@ const iconsArray = [
 // // // // For dashboard's charts
 // //
 //
-// Data for Pie Chart
+// Data for PieChart Doughnut
 var dataPie = {
     labels: [
 		'Lose',
@@ -487,27 +487,22 @@ var dataPie = {
 		backgroundColor: [
 		'#FF6384',
 		'#36A2EB'
-		// '#FFCE56'
 		],
 		hoverBackgroundColor: [
 		'#FF6384',
 		'#36A2EB'
-		// '#FFCE56'
         ]
 	}]
 };
+// Options for PieChart Doughnut
 var pieOptions = {
-    animation: { animateRotate: true, animateScale: true }
-    // donut: true,
-    // donutWidth: 50,
-    // donutSolid: true,
-    // startAngle: 270,
-    // showLabel: true
+    animation: { animateRotate: true, animateScale: true },
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+        display: true
+    }
 }
-var legendPie = {
-    names: ["Open","Bounce","Unsubscribe"],
-    types: ["info","danger","warning"]
-};
 
 // Data and listener animation for Line Chart
 var dataSales = {
@@ -597,5 +592,5 @@ module.exports = {
     style, // For notifications (App container and Notifications view)
     thArray, tdArray, // For tables (TableList view)
     iconsArray, // For icons (Icons view)
-    dataPie, pieOptions, legendPie, dataSales, optionsSales, listener, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
+    dataPie, pieOptions, dataSales, optionsSales, listener, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
 };

@@ -165,7 +165,9 @@ class Dashboard extends Component {
                             category="Last Campaign Performance"
                             stats="Campaign sent 2 days ago"
                             content={
-                                <Doughnut data={dataPie} options={pieOptions} />
+                                <div id="chartPreferences" className="ct-chart ct-perfect-fourth">
+                                    <Doughnut className="chart-container" data={dataPie} options={pieOptions} />
+                                </div>
                             }
                             />
                             {/* <Card
