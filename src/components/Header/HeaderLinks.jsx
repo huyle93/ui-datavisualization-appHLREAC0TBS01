@@ -15,7 +15,7 @@ class HeaderLinks extends Component{
         return (
             <div>
                 <Nav>
-                    <NavItem eventKey={1} href="#">
+                    <NavItem eventKey={1} href="#/Dashboard">
                         <i className="fa fa-balance-scale"></i>
                         <p className="hidden-lg hidden-md">Attorney Insight</p>
                     </NavItem>

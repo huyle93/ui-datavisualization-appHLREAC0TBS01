@@ -10,7 +10,7 @@ import Header from 'components/Header/Header';
 /* import Footer from 'components/Footer/Footer'; */
 /* import Sidebar from 'components/Sidebar/Sidebar'; */
 
-import {style} from "variables/Variables.jsx";
+import {style} from "variables/Styles.jsx";
 
 import appRoutes from 'routes/app.jsx';
 

@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
-import {Doughnut} from 'react-chartjs-2';
-import { Grid, Row, Col } from 'react-bootstrap';
+import {Doughnut, Radar} from 'react-chartjs-2';
+import { Grid, Row, Col, Table } from 'react-bootstrap';
 
 
 import {Card} from 'components/Card/Card.jsx';
 import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 import {Tasks} from 'components/Tasks/Tasks.jsx';
-import { AttorneyTable } from 'components/Table/Table.jsx';
+import {thArray, tdArray} from 'variables/Tables.jsx';
+import {iconsArray} from "variables/Icons.jsx";
+// import { AttorneyTable } from 'components/Table/Table.jsx';
 import {
+    dataRadar,
+    radarOptions,
     dataPie,
     pieOptions,
     legendPie,
@@ -21,7 +25,8 @@ import {
     optionsBar,
     responsiveBar,
     legendBar
-} from 'variables/Variables.jsx';
+} from 'variables/Charts.jsx';
+import TableList from '../TableList/TableList';
 
 class Dashboard extends Component {
     createLegend(json){
@@ -42,6 +47,9 @@ class Dashboard extends Component {
         return (
             <div className="content">
                 <Grid fluid>
+                    <Row>
+                        <Col lg={3}/>
+                    </Row>
                     <Row>
                         <Col lg={4} sm={6}>
                             <StatsCard
@@ -128,7 +136,24 @@ class Dashboard extends Component {
                             /> */}
                         </Col>
                         <Col md={5}>
-                            <Card
+                            <Card 
+                            statsIcon="fa fa-history"
+                            id="chartHours"
+                            title="Attorney's Niche"
+                            category="Data since 2000"
+                            stats="Updated 3 minutes ago"
+                            legend={
+                                <div className="legend">
+                                    {this.createLegend(legendBar)}
+                                </div>
+                            }
+                            content={
+                                <div id="chartPreferences" className="ct-chart">
+                                    <Radar className="chart-container" data={dataRadar} options={pieOptions} />
+                                </div>
+                            }
+                            />
+                            {/* <Card
                                 statsIcon="fa fa-history"
                                 id="chartHours"
                                 title="Users Behavior"
@@ -150,13 +175,48 @@ class Dashboard extends Component {
                                         {this.createLegend(legendSales)}
                                     </div>
                                 }
-                            />
+                            /> */}
                         </Col>
                     </Row>
 
                     <Row>
                         <Col md={8}>
-                            <AttorneyTable />
+                            <Card 
+                            statsIcon="fa fa-clock-o"
+                            title="Email Statistics"
+                            category="Last Campaign Performance"
+                            stats="Campaign sent 2 days ago"
+                            content={
+                                <Table striped hover>
+                                    <thead>
+                                        <tr>
+                                            {
+                                                thArray.map((prop, key) => {
+                                                    return (
+                                                    <th  key={key}>{prop}</th>
+                                                    );
+                                                })
+                                            }
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
+                                            tdArray.map((prop,key) => {
+                                                return (
+                                                    <tr key={key}>{
+                                                        prop.map((prop,key)=> {
+                                                            return (
+                                                                <td  key={key}>{prop}</td>
+                                                            );
+                                                        })
+                                                    }</tr>
+                                                )
+                                            })
+                                        }
+                                    </tbody>
+                                </Table>
+                            }
+                            />
                         </Col>
                         <Col md={4}>
                             <Card 
