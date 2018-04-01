@@ -45,7 +45,7 @@ class Dashboard extends Component {
                     <Row>
                         <Col lg={4} sm={6}>
                             <StatsCard
-                                bigIcon={<i className="pe-7s-share text-warning"></i>}
+                                bigIcon={<i className="pe-7s-user text-warning"></i>}
                                 statsText="Recommended Attorney"
                                 statsValue="Collette Powers"
                                 statsIcon={<i className="fa fa-refresh"></i>}
@@ -54,7 +54,7 @@ class Dashboard extends Component {
                         </Col>
                         <Col lg={4} sm={6}>
                             <StatsCard
-                                bigIcon={<i className="pe-7s-refresh-2 text-success"></i>}
+                                bigIcon={<i className="pe-7s-hammer text-success"></i>}
                                 statsText="Revenue"
                                 statsValue="$1,345"
                                 statsIcon={<i className="fa fa-calendar-o"></i>}

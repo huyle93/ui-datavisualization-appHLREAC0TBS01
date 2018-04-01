@@ -16,7 +16,7 @@ class HeaderLinks extends Component{
             <div>
                 <Nav>
                     <NavItem eventKey={1} href="#">
-                        <i className="fa fa-bar-chart"></i>
+                        <i className="fa fa-balance-scale"></i>
                         <p className="hidden-lg hidden-md">Attorney Insight</p>
                     </NavItem>
                     <NavItem eventKey={3} href="#">

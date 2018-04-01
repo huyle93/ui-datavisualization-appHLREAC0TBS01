@@ -88,7 +88,9 @@ body > .navbar-collapse{
 
 
 .main-panel{
-    background: #E4F1FE; // rgba(203,203,210,.15);
+    // background: #E4F1FE; // rgba(203,203,210,.15);
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
     position: relative;
     width: 100%;
     

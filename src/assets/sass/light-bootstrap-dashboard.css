@@ -311,7 +311,8 @@ body > .navbar-collapse[data-color="purple"]:after {
   background-size: 150% 150%; }
 
 .main-panel {
-  background: #E4F1FE;
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
   position: relative;
   width: 100%; }
   .main-panel > .content {
@@ -657,7 +658,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 .form-control {
   background-color: #FFFFFF;
   border: 1px solid #E3E3E3;
-  border-radius: 0px;
+  border-radius: 4px;
   color: #565656;
   padding: 8px 12px;
   height: 40px;
@@ -694,7 +695,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     top: 50%;
     vertical-align: middle; }
   .open .form-control {
-    border-radius: 0px 0px 0 0;
+    border-radius: 4px 4px 0 0;
     border-bottom-color: transparent; }
 
 .input-lg {
@@ -710,7 +711,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 .input-group-addon {
   background-color: #FFFFFF;
   border: 1px solid #E3E3E3;
-  border-radius: 0px; }
+  border-radius: 4px; }
   .has-success .input-group-addon,
   .has-error .input-group-addon {
     background-color: #FFFFFF;
@@ -806,7 +807,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     max-width: 89%; }
   .alert[data-notify="container"] {
     padding: 10px 10px 10px 20px;
-    border-radius: 0px; }
+    border-radius: 4px; }
   .alert.alert-with-icon {
     padding-left: 65px; }
   .alert a, .alert a:hover, .alert a:focus {
@@ -1499,7 +1500,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   visibility: hidden;
   margin: 0;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 0;
   display: block;
   z-index: 9000;
   position: absolute;
@@ -1595,7 +1596,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   overflow: visible; }
 
 .card {
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
   background-color: #FFFFFF;
   margin-bottom: 30px;
@@ -1605,7 +1606,7 @@ body > .navbar-collapse[data-color="purple"]:after {
     width: 100%;
     overflow: hidden;
     height: 260px;
-    border-radius: 0px 0px 0 0;
+    border-radius: 4px 4px 0 0;
     position: relative;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -1708,7 +1709,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   .card .table thead th:last-child {
     padding-right: 15px; }
   .card .alert {
-    border-radius: 0px;
+    border-radius: 4px;
     position: relative; }
     .card .alert.alert-with-icon {
       padding-left: 65px; }
