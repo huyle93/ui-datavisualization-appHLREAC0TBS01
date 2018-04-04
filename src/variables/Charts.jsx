@@ -125,37 +125,63 @@ var legendSales = {
     names: ["Open","Click","Click Second Time"],
     types: ["info","danger","warning"]
 };
-
-// Data for Bar Chart
-var dataBar = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  series: [
-    [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-    [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
-  ]
-};
-var optionsBar = {
-    seriesBarDistance: 10,
-    axisX: {
-        showGrid: false
-    },
-    height: "245px"
-};
-var responsiveBar = [
-  ['screen and (max-width: 640px)', {
-    seriesBarDistance: 5,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value[0];
+// Data for Chartjs Bar Chart
+const dataBar = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        backgroundColor: 'rgba(255,99,132,0.2)',
+        borderColor: 'rgba(255,99,132,1)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+        hoverBorderColor: 'rgba(255,99,132,1)',
+        data: [65, 59, 80, 81, 56, 55, 40]
       }
+    ]
+};
+  
+const optionsBar = {
+    maintainAspectRatio: false
+};
+  
+const pluginsBar = [{
+    afterDraw: (chartInstance, easing) => {
+        const ctx = chartInstance.chart.ctx;
+        ctx.fillText("This text drawn by a plugin", 100, 100);
     }
-  }]
-];
+}];
+// Data for Bar Chart
+// Chartist JS
+// var dataBar = {
+//   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+//   series: [
+//     [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+//     [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
+//   ]
+// };
+// var optionsBar = {
+//     seriesBarDistance: 10,
+//     axisX: {
+//         showGrid: false
+//     },
+//     height: "245px"
+// };
+// var responsiveBar = [
+//   ['screen and (max-width: 640px)', {
+//     seriesBarDistance: 5,
+//     axisX: {
+//       labelInterpolationFnc: function (value) {
+//         return value[0];
+//       }
+//     }
+//   }]
+// ];
 var legendBar = {
     names: ["Tesla Model S","BMW 5 Series"],
     types: ["info","danger"]
 };
 
 module.exports = {
-    dataRadar, radarOptions, dataPie, pieOptions, dataSales, optionsSales, listener, responsiveSales, legendSales, dataBar, optionsBar, responsiveBar, legendBar // For charts (Dashboard view)
+    dataRadar, radarOptions, dataPie, pieOptions, dataSales, optionsSales, listener, responsiveSales, legendSales, dataBar, optionsBar, pluginsBar, legendBar // For charts (Dashboard view)
 };

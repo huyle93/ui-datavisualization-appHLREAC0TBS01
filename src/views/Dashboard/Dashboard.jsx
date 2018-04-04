@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChartistGraph from 'react-chartist';
-import {Doughnut, Radar} from 'react-chartjs-2';
+import {Doughnut, Radar, Bar} from 'react-chartjs-2';
 import { Grid, Row, Col, Table } from 'react-bootstrap';
 
 
@@ -23,7 +23,7 @@ import {
     legendSales,
     dataBar,
     optionsBar,
-    responsiveBar,
+    pluginsBar,
     legendBar
 } from 'variables/Charts.jsx';
 import TableList from '../TableList/TableList';
@@ -99,11 +99,9 @@ class Dashboard extends Component {
                                 statsIcon="fa fa-check"
                                 content={
                                     <div className="ct-chart">
-                                        <ChartistGraph
+                                        <Bar
                                             data={dataBar}
-                                            type="Bar"
                                             options={optionsBar}
-                                            responsiveOptions={responsiveBar}
                                         />
                                     </div>
                                 }
