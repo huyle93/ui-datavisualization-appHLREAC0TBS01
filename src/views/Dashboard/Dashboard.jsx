@@ -55,25 +55,25 @@ class Dashboard extends Component {
                             <StatsCard
                                 bigIcon={<i className="pe-7s-user text-warning"></i>}
                                 statsText="Recommended Attorney"
-                                statsValue="Collette Powers"
+                                statsValue="Paul S. Gillies"
                                 statsIcon={<i className="fa fa-refresh"></i>}
                                 statsIconText="Updated now"
                             />
                         </Col>
-                        <Col lg={4} sm={6}>
+                        <Col lg={3} sm={6}>
                             <StatsCard
                                 bigIcon={<i className="pe-7s-hammer text-success"></i>}
-                                statsText="Revenue"
-                                statsValue="$1,345"
+                                statsText="Winning Chance"
+                                statsValue="83%"
                                 statsIcon={<i className="fa fa-calendar-o"></i>}
                                 statsIconText="Last day"
                             />
                         </Col>
-                        <Col lg={4} sm={6}>
+                        <Col lg={5} sm={6}>
                             <StatsCard
-                                bigIcon={<i className="pe-7s-graph1 text-danger"></i>}
-                                statsText="Errors"
-                                statsValue="23"
+                                bigIcon={<i className="pe-7s-medal text-danger"></i>}
+                                statsText="Winning Chance against Judge Thomas Durkin"
+                                statsValue="92%"
                                 statsIcon={<i className="fa fa-clock-o"></i>}
                                 statsIconText="In the last hour"
                             />
@@ -90,12 +90,12 @@ class Dashboard extends Component {
                     </Row>
                     {/* CHART */}
                     <Row>
-                        <Col md={7}>
+                        <Col md={8}>
                             <Card
                                 id="chartActivity"
-                                title="2014 Sales"
-                                category="All products including Taxes"
-                                stats="Data information certified"
+                                title="Top 10 Attorney"
+                                category="Attorney againt Judge Thomas Durkin"
+                                stats="Updated 2 minutes ago"
                                 statsIcon="fa fa-check"
                                 content={
                                     <div className="ct-chart">
@@ -133,19 +133,19 @@ class Dashboard extends Component {
                                 }
                             /> */}
                         </Col>
-                        <Col md={5}>
+                        <Col md={4}>
                             <Card 
                             statsIcon="fa fa-history"
                             id="chartHours"
                             title="Attorney's Niche"
                             category="Data since 2000"
-                            stats="Updated 3 minutes ago"
+                            stats="Updated 2 minutes ago"
                             legend={
                                 <div className="legend">
                                     {this.createLegend(legendBar)}
                                 </div>
                             }
-                            content={
+                   content={
                                 <div id="chartPreferences" className="ct-chart">
                                     <Radar className="chart-container" data={dataRadar} options={pieOptions} />
                                 </div>
@@ -178,12 +178,12 @@ class Dashboard extends Component {
                     </Row>
 
                     <Row>
-                        <Col md={8}>
+                        <Col md={7}>
                             <Card 
-                            statsIcon="fa fa-clock-o"
-                            title="Email Statistics"
-                            category="Last Campaign Performance"
-                            stats="Campaign sent 2 days ago"
+                            statsIcon="fa fa-hourglass-2"
+                            title="Similar Attorney"
+                            category="Compare to Recommended Attorney "
+                            stats="Updated a week ago"
                             content={
                                 <Table striped hover>
                                     <thead>
@@ -216,12 +216,12 @@ class Dashboard extends Component {
                             }
                             />
                         </Col>
-                        <Col md={4}>
+                        <Col md={5}>
                             <Card 
                             statsIcon="fa fa-clock-o"
-                            title="Email Statistics"
-                            category="Last Campaign Performance"
-                            stats="Campaign sent 2 days ago"
+                            title="Probability Distribution"
+                            category="Paul S. Gillies"
+                            stats="Updated 2 minutes ago"
                             content={
                                 <div id="chartPreferences" className="ct-chart ct-perfect-fourth">
                                     <Doughnut className="chart-container" data={dataPie} options={pieOptions} />
