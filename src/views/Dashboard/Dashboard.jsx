@@ -9,7 +9,7 @@ import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 import {Tasks} from 'components/Tasks/Tasks.jsx';
 import {thArray, tdArray} from 'variables/Tables.jsx';
 import {iconsArray} from "variables/Icons.jsx";
-// import { AttorneyTable } from 'components/Table/Table.jsx';
+
 import {
     dataRadar,
     radarOptions,
