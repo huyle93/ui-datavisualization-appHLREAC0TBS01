@@ -9,22 +9,40 @@ var dataRadar = {
     datasets: [
         {
         label: 'Paul S. Gillies',
+<<<<<<< HEAD
+        backgroundColor: 'rgba(243, 57, 57, 0.3)',
+        borderColor: 'rgba(243, 57, 57, 1)',
+        pointBackgroundColor: 'rgba(243, 57, 57, 1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(243, 57, 57, 1)',
+=======
         backgroundColor: 'rgba(179,181,198,0.2)',
         borderColor: 'rgba(179,181,198,1)',
         pointBackgroundColor: 'rgba(179,181,198,1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(179,181,198,1)',
+>>>>>>> master
         data: [90, 59, 20, 31, 56, 40]
         },
         {
         label: 'Jon Hall',
+<<<<<<< HEAD
+        backgroundColor: 'rgba(153, 102, 255, 0.3)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        pointBackgroundColor: 'rgba(153, 102, 255, 1)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgba(153, 102, 255, 1)',
+=======
         backgroundColor: 'rgba(255,99,132,0.2)',
         borderColor: 'rgba(255,99,132,1)',
         pointBackgroundColor: 'rgba(255,99,132,1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(255,99,132,1)',
+>>>>>>> master
         data: [28, 38, 80, 59, 16, 27]
         }
     ]
