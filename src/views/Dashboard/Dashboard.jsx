@@ -63,11 +63,7 @@ class Dashboard extends Component {
                         <Col lg={3} sm={6}>
                             <StatsCard
                                 bigIcon={<i className="pe-7s-hammer text-success"></i>}
-<<<<<<< HEAD
                                 statsText="Winning Chance before all Judges "
-=======
-                                statsText="Winning Chance"
->>>>>>> master
                                 statsValue="83%"
                                 statsIcon={<i className="fa fa-calendar-o"></i>}
                                 statsIconText="Last day"
@@ -76,11 +72,7 @@ class Dashboard extends Component {
                         <Col lg={5} sm={6}>
                             <StatsCard
                                 bigIcon={<i className="pe-7s-medal text-danger"></i>}
-<<<<<<< HEAD
                                 statsText="Winning Chance before Judge Thomas Durkin"
-=======
-                                statsText="Winning Chance against Judge Thomas Durkin"
->>>>>>> master
                                 statsValue="92%"
                                 statsIcon={<i className="fa fa-clock-o"></i>}
                                 statsIconText="In the last hour"
@@ -101,13 +93,8 @@ class Dashboard extends Component {
                         <Col md={8}>
                             <Card
                                 id="chartActivity"
-<<<<<<< HEAD
                                 title="Top 10 Attorneys"
                                 category="Attorney againt before Thomas Durkin"
-=======
-                                title="Top 10 Attorney"
-                                category="Attorney againt Judge Thomas Durkin"
->>>>>>> master
                                 stats="Updated 2 minutes ago"
                                 statsIcon="fa fa-check"
                                 content={
