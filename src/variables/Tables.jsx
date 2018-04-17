@@ -5,12 +5,13 @@
 //
 const thArray = ["Rank","Similar Attorney","Total Cases","Win Ratio","Recommended Division"];
 const tdArray = [
-    [ "1" , "Dakota Rice" , "36,738" , "87%" , "Oud-Turnhout" ] ,
-    [ "2" , "Minerva Hooper" , "23,789" , "84%" , "Sinaai-Waas" ] ,
-    [ "3" , "Sage Rodriguez" , "56,142" , "82%" , "Baileux" ] ,
-    [ "4" , "Philip Chaney" , "38,735" , "78%" , "Overland Park" ] ,
-    [ "5" , "Doris Greene" , "63,542" , "72%" , "Feldkirchen in Kärnten" ] ,
-    [ "6" , "Mason Porter" , "78,615" , "71%" , "Gloucester" ]
+    [ "1" , "Tony Bucknam" , "73" , "87%" , "Family" ] ,
+    [ "2" , "Mark Shellrot" , "38" , "84%" , "Criminal" ] ,
+    [ "3" , "Ben Lafferty" , "54" , "62%" , "Environmental" ] ,
+    [ "4" , "Melanie Kehne" , "35" , "78%" , "Civil" ] ,
+    [ "5" , "Melvin Fink" , "42" , "72%" , "Environmental" ] ,
+    [ "6" , "Rodney Dunkiel" , "15" , "71%" , "Civil" ]
+    
 ];
 
 module.exports = {

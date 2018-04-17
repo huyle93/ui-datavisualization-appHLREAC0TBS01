@@ -146,6 +146,7 @@ var style = {
             position: 'absolute',
             top: '50%',
             marginTop: '-15px'
+        
         }
 
     },
