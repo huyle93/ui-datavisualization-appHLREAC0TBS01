@@ -90,7 +90,7 @@ class Dashboard extends Component {
                     </Row>
                     {/* CHART */}
                     <Row>
-                        <Col md={8}>
+                        <Col md={7}>
                             <Card
                                 id="chartActivity"
                                 title="Top 10 Attorneys"
@@ -133,7 +133,7 @@ class Dashboard extends Component {
                                 }
                             /> */}
                         </Col>
-                        <Col md={4}>
+                        <Col md={5}>
                             <Card 
                             statsIcon="fa fa-history"
                             id="chartHours"

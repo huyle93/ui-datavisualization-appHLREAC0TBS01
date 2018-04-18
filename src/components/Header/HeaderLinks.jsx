@@ -4,10 +4,15 @@ import Autosuggest from 'react-autosuggest';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const languages = [
-  
     {
-        name: 'Paul S. Gillies'
-    }
+        name: 'Thomas Durkin'
+    },
+    {
+        name: 'John Zaikowski'
+    },
+    {
+        name: 'Tony Adam'
+    },
   ];
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = value => {
@@ -117,14 +122,14 @@ class HeaderLinks extends Component{
                 </Nav>
                 <Nav pullRight>
                     {/* <NavItem eventKey={1} href="#">Account</NavItem> */}
-                    <NavDropdown eventKey={2} title="Dropdown" id="basic-nav-dropdown-right">
+                    <NavDropdown eventKey={2} title="Support" id="basic-nav-dropdown-right">
                         <MenuItem eventKey={2.1}>Action</MenuItem>
-                        <MenuItem eventKey={2.2}>Another action</MenuItem>
-                        <MenuItem eventKey={2.3}>Something</MenuItem>
-                        <MenuItem eventKey={2.4}>Another action</MenuItem>
-                        <MenuItem eventKey={2.5}>Something</MenuItem>
+                        <MenuItem eventKey={2.2}>Service</MenuItem>
+                        <MenuItem eventKey={2.3}>Legal Team</MenuItem>
+                        <MenuItem eventKey={2.4}>Tech Team</MenuItem>
+                        <MenuItem eventKey={2.5}>Software Support</MenuItem>
                         <MenuItem divider />
-                        <MenuItem eventKey={2.5}>Separated link</MenuItem>
+                        <MenuItem eventKey={2.5}>Liberty Mutual</MenuItem>
                     </NavDropdown>
                 </Nav>
             </div>
