@@ -46,7 +46,7 @@ class App extends Component {
             title: (<span data-notify="icon" className="pe-7s-gift"></span>),
             message: (
                 <div>
-                    Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.
+                    Welcome to <b>Attorney Insight Dashboard</b> - Court Data Mining Pipeline Project.
                 </div>
             ),
             level: level,
@@ -79,7 +79,7 @@ class App extends Component {
             title: (<span data-notify="icon" className="pe-7s-gift"></span>),
             message: (
                 <div>
-                    Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.
+                    Welcome to <b>Attorney Insight Dashboard</b> - Court Data Mining Pipeline Project.
                 </div>
             ),
             level: level,
