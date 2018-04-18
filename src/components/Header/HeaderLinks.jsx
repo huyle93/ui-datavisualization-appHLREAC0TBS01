@@ -4,13 +4,9 @@ import Autosuggest from 'react-autosuggest';
 
 // Imagine you have a list of languages that you'd like to autosuggest.
 const languages = [
+  
     {
-      name: 'C',
-      year: 1972
-    },
-    {
-      name: 'Elm',
-      year: 2012
+        name: 'Paul S. Gillies'
     }
   ];
 // Teach Autosuggest how to calculate suggestions for any given input value.
@@ -70,6 +66,10 @@ class HeaderLinks extends Component{
             suggestions: []
         });
     };
+
+    // Test to see if click the page it would load
+    onSuggestionSelected = (event, { languages, suggestionValue, suggestionIndex, sectionIndex, method }) =>{
+    }
     // Render Component
     render(){
         const { value, suggestions } = this.state;
@@ -78,7 +78,9 @@ class HeaderLinks extends Component{
         const inputProps = {
             placeholder: 'Judges name',
             value,
-            onChange: this.onChange
+            onChange: this.onChange,
+
+            
         };
         const notification = (
             <div>
@@ -103,8 +105,13 @@ class HeaderLinks extends Component{
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
                             getSuggestionValue={getSuggestionValue}
+                            onSuggestionSelected={this.onSuggestionSelected}  //. <-----
+
                             renderSuggestion={renderSuggestion}
                             inputProps={inputProps}
+                            onSuggestionSelected={() => {
+                                window.location.reload();
+                            }}
                         />
                     </NavItem>
                 </Nav>
