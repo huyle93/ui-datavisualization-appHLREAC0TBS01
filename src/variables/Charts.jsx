@@ -28,22 +28,22 @@ var dataRadar = {
         data: [28, 38, 80, 59, 16, 27]
         }
     ]
-}
+};
 var radarOptions = {
-    animation: { animateRotate: true, animateScale: true },
+    animation: {animateRotate: true, animateScale: true},
     responsive: true,
     maintainAspectRatio: false,
     scales: {
         yAxes: [{
             ticks: {
-                beginAtZero:true
+                beginAtZero: true
             }
         }]
     },
     legend: {
         display: true
     }
-}
+};
 // Data for Pie Chart Doughnut
 var dataPie = {
     labels: [
@@ -64,13 +64,13 @@ var dataPie = {
 };
 // Options for Pie Chart Doughnut
 var pieOptions = {
-    animation: { animateRotate: true, animateScale: true },
+    animation: {animateRotate: true, animateScale: true},
     responsive: true,
     maintainAspectRatio: false,
     legend: {
         display: true
     }
-}
+};
 
 // Data and listener animation for Line Chart
 var dataSales = {

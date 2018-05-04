@@ -1,44 +1,36 @@
-import React, { Component } from 'react';
-import ChartistGraph from 'react-chartist';
+import React, {Component} from 'react';
 import {Doughnut, Radar, Bar} from 'react-chartjs-2';
-import { Grid, Row, Col, Table } from 'react-bootstrap';
+import {Grid, Row, Col, Table} from 'react-bootstrap';
 
 
 import {Card} from 'components/Card/Card.jsx';
 import {StatsCard} from 'components/StatsCard/StatsCard.jsx';
 import {Tasks} from 'components/Tasks/Tasks.jsx';
 import {thArray, tdArray} from 'variables/Tables.jsx';
-import {iconsArray} from "variables/Icons.jsx";
+import {iconsArray} from 'variables/Icons.jsx';
 
 import {
     dataRadar,
     radarOptions,
     dataPie,
     pieOptions,
-    legendPie,
-    dataSales,
-    optionsSales,
-    listener,
-    responsiveSales,
-    legendSales,
     dataBar,
     optionsBar,
-    pluginsBar,
     legendBar
 } from 'variables/Charts.jsx';
 import TableList from '../TableList/TableList';
 
 class Dashboard extends Component {
-    createLegend(json){
+    createLegend(json) {
         var legend = [];
-        for(var i = 0; i < json["names"].length; i++){
-            var type = "fa fa-circle text-"+json["types"][i];
+        for (var i = 0; i < json.names.length; i++) {
+            var type = `fa fa-circle text-${json.types[i]}`;
             legend.push(
                 <i className={type} key={i}></i>
             );
-            legend.push(" ");
+            legend.push(' ');
             legend.push(
-                json["names"][i]
+                json.names[i]
             );
         }
         return legend;
@@ -78,17 +70,7 @@ class Dashboard extends Component {
                                 statsIconText="In the last hour"
                             />
                         </Col>
-                        {/* <Col lg={3} sm={6}>
-                            <StatsCard
-                                bigIcon={<i className="fa fa-twitter text-info"></i>}
-                                statsText="Followers"
-                                statsValue="+45"
-                                statsIcon={<i className="fa fa-refresh"></i>}
-                                statsIconText="Updated now"
-                            />
-                        </Col> */}
                     </Row>
-                    {/* CHART */}
                     <Row>
                         <Col md={7}>
                             <Card
@@ -111,30 +93,9 @@ class Dashboard extends Component {
                                     </div>
                                 }
                             />
-                            {/* <Card
-                                statsIcon="fa fa-clock-o"
-                                title="Email Statistics"
-                                category="Last Campaign Performance"
-                                stats="Campaign sent 2 days ago"
-                                content={
-                                    <div id="chartPreferences" className="ct-chart ct-perfect-fourth">
-                                        <ChartistGraph 
-                                            listener={listener}
-                                            data={dataPie} 
-                                            type="Pie"
-                                            options={pieOptions}
-                                        />
-                                    </div>
-                                }
-                                legend={
-                                    <div className="legend">
-                                        {this.createLegend(legendPie)}
-                                    </div>
-                                }
-                            /> */}
                         </Col>
                         <Col md={5}>
-                            <Card 
+                            <Card
                             statsIcon="fa fa-history"
                             id="chartHours"
                             title="Top Two Attorneys"
@@ -151,35 +112,12 @@ class Dashboard extends Component {
                                 </div>
                             }
                             />
-                            {/* <Card
-                                statsIcon="fa fa-history"
-                                id="chartHours"
-                                title="Users Behavior"
-                                category="24 Hours performance"
-                                stats="Updated 3 minutes ago"
-                                content={
-                                    <div className="ct-chart">
-                                        <ChartistGraph
-                                            listener={listener}
-                                            data={dataSales}
-                                            type="Line"
-                                            options={optionsSales}
-                                            responsiveOptions={responsiveSales}
-                                        />
-                                    </div>
-                                    }
-                                legend={
-                                    <div className="legend">
-                                        {this.createLegend(legendSales)}
-                                    </div>
-                                }
-                            /> */}
                         </Col>
                     </Row>
 
                     <Row>
                         <Col md={7}>
-                            <Card 
+                            <Card
                             statsIcon="fa fa-hourglass-2"
                             title="Similar Attorney"
                             category="Compare to Recommended Attorney "
@@ -191,7 +129,7 @@ class Dashboard extends Component {
                                             {
                                                 thArray.map((prop, key) => {
                                                     return (
-                                                    <th  key={key}>{prop}</th>
+                                                    <th key={key}>{prop}</th>
                                                     );
                                                 })
                                             }
@@ -199,16 +137,16 @@ class Dashboard extends Component {
                                     </thead>
                                     <tbody>
                                         {
-                                            tdArray.map((prop,key) => {
+                                            tdArray.map((prop, key) => {
                                                 return (
                                                     <tr key={key}>{
-                                                        prop.map((prop,key)=> {
+                                                        prop.map((prop,key) => {
                                                             return (
-                                                                <td  key={key}>{prop}</td>
+                                                                <td key={key}>{prop}</td>
                                                             );
                                                         })
                                                     }</tr>
-                                                )
+                                                );
                                             })
                                         }
                                     </tbody>
@@ -217,7 +155,7 @@ class Dashboard extends Component {
                             />
                         </Col>
                         <Col md={5}>
-                            <Card 
+                            <Card
                             statsIcon="fa fa-clock-o"
                             title="Probability Distribution"
                             category="Paul S. Gillies"
@@ -228,19 +166,6 @@ class Dashboard extends Component {
                                 </div>
                             }
                             />
-                            {/* <Card
-                                title="Tasks"
-                                category="Backend development"
-                                stats="Updated 3 minutes ago"
-                                statsIcon="fa fa-history"
-                                content={
-                                    <div className="table-full-width">
-                                        <table className="table">
-                                            <Tasks />
-                                        </table>
-                                    </div>
-                                }
-                            /> */}
                         </Col>
                     </Row>
 
