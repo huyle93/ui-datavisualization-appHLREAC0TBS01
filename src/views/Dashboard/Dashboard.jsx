@@ -123,7 +123,7 @@ class Dashboard extends Component {
                             category="Compare to Recommended Attorney "
                             stats="Updated a week ago"
                             content={
-                                <Table striped hover>
+                                <Table table striped hover>
                                     <div className="tbl-header">
                                         <thead>
                                             <tr>
