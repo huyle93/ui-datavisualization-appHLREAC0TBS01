@@ -124,32 +124,36 @@ class Dashboard extends Component {
                             stats="Updated a week ago"
                             content={
                                 <Table striped hover>
-                                    <thead>
-                                        <tr>
+                                    <div className="tbl-header">
+                                        <thead>
+                                            <tr>
+                                                {
+                                                    thArray.map((prop, key) => {
+                                                        return (
+                                                        <th key={key}>{prop}</th>
+                                                        );
+                                                    })
+                                                }
+                                            </tr>
+                                        </thead>
+                                    </div>
+                                    <div className="tbl-body">
+                                        <tbody>
                                             {
-                                                thArray.map((prop, key) => {
+                                                tdArray.map((prop, key) => {
                                                     return (
-                                                    <th key={key}>{prop}</th>
+                                                        <tr key={key}>{
+                                                            prop.map((prop,key) => {
+                                                                return (
+                                                                    <td key={key}>{prop}</td>
+                                                                );
+                                                            })
+                                                        }</tr>
                                                     );
                                                 })
                                             }
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            tdArray.map((prop, key) => {
-                                                return (
-                                                    <tr key={key}>{
-                                                        prop.map((prop,key) => {
-                                                            return (
-                                                                <td key={key}>{prop}</td>
-                                                            );
-                                                        })
-                                                    }</tr>
-                                                );
-                                            })
-                                        }
-                                    </tbody>
+                                        </tbody>
+                                    </div>
                                 </Table>
                             }
                             />
