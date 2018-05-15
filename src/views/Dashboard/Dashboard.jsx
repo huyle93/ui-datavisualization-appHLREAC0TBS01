@@ -55,7 +55,7 @@ class Dashboard extends Component {
                         <Col lg={3} sm={6}>
                             <StatsCard
                                 bigIcon={<i className="pe-7s-hammer text-success"></i>}
-                                statsText="Winning Chance before all Judges "
+                                statsText="Overall Winning Chance "
                                 statsValue="83%"
                                 statsIcon={<i className="fa fa-calendar-o"></i>}
                                 statsIconText="Last day"
