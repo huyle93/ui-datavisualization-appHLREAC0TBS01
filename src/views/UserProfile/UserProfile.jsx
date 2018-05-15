@@ -22,13 +22,13 @@ class UserProfile extends Component {
                                 content={
                                  <div className="name">
                                    <b><h1 style={{textAlign: "center", fontFamily: "Impact"}}>
-                                   Welcome Mike</h1></b>
+                                   Welcome Huy!</h1></b>
                                 </div>
                                 }
                             />
                         </Col>
                         <Col md={12}>
-                            <UserCard
+                            {/* <UserCard
                                 bgImage="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400"
                                 avatar={avatar}
                                 name="Mike Andrew"
@@ -49,7 +49,7 @@ class UserProfile extends Component {
                                         <Button simple><i className="fa fa-google-plus-square"></i></Button>
                                     </div>
                                 }
-                            />
+                            /> */}
                         </Col>
                     </Row>
                 </Grid>

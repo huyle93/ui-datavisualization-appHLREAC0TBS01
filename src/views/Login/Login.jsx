@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Card} from 'components/Card/Card.jsx';
-import {Grid, Row, Col, ButtonToolbar, Button} from 'react-bootstrap';
+import {Grid, Row, Col, ButtonToolbar, Button, Form} from 'react-bootstrap';
 //import {FormInputs} from 'components/FormInputs/FormInputs.jsx';
 //import {UserCard} from 'components/UserCard/UserCard.jsx';
 //import Button from 'elements/CustomButton/CustomButton.jsx';
@@ -73,13 +73,15 @@ class LoginForm extends Component {
   clickHandler() {
     // put your own code here
     window.location.href = "http://localhost:3000/?#/user"
-}
-  
+  }
+
   render() {
     return (
       <div>
-        <Input id ="username" labelName="Username: " inputType="text" parentFunction={this.setUsername}  />
-        <Input margin="auto" id ="password" labelName="Password: " inputType="password" parentFunction={this.setPassword} /> 
+        <Form>
+          <Input id ="username" labelName="Username: " inputType="text" parentFunction={this.setUsername}  />
+          <Input margin="auto" id ="password" labelName="Password: " inputType="password" parentFunction={this.setPassword} />
+        </Form>
         <Button bsStyle="primary" bsSize="medium" onClick={this.clickHandler} active> {this.props.buttonName} </Button>
       </div>
     )
@@ -98,36 +100,31 @@ class Content extends Component {
     )
   }
 }
-class Landing extends Component {
+class Login extends Component {
   render() {
     return (
 
 
-      <div>
+      <div className="content">
         <Grid fluid>
-                    <Row className="text-center">
-                        <Row md={15}>
-                        <Col md={12}>
-                            <Col md={12}>
-                            <Card
-                                content={
-                                 <div className="login">
-                                  <Header text="Welcome to the attorney finder"/>
-                                  <Content title=""/>
-                                  <Footer text="Put some style on it"/>
-                                </div>
-                                }
-                            />
-                            </Col>
-                        </Col>
-                    </Row>
-                </Row>
+          <Row className="text-center">
+            <Col md={4}></Col>
+            <Col md={4}>
+              <Card
+                  content={
+                    <div className="login">
+                    <Header text="Welcome to Attorney Insider"/>
+                    <Content title=""/>
+                    <Footer text=""/>
+                  </div>
+                  }
+              />
+            </Col>
+            <Col md={4}></Col>
+          </Row>
         </Grid>
       </div>
-
-
-
     )
   }
 }
-export default Landing;
+export default Login;
