@@ -1,4 +1,4 @@
-//import Landing from 'views/Landing/Landing';
+import Landing from 'views/Landing/Landing';
 import Dashboard from 'views/Dashboard/Dashboard';
 import UserProfile from 'views/UserProfile/UserProfile';
 import TableList from 'views/TableList/TableList';
@@ -9,7 +9,7 @@ import Notifications from 'views/Notifications/Notifications';
 import Upgrade from 'views/Upgrade/Upgrade';
 
 const appRoutes = [
-    //{ path: "/login", name: "Login", component: Landing },
+    { path: "/login", name: "Login", component: Landing },
     { path: "/dashboard", name: "Attorney Insight", icon: "pe-7s-graph", component: Dashboard },
     { path: "/user", name: "User Profile", icon: "pe-7s-user", component: UserProfile },
     { path: "/table", name: "Table List", icon: "pe-7s-note2", component: TableList },
