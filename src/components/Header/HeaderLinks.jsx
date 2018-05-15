@@ -111,11 +111,11 @@ class HeaderLinks extends Component{
                             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
                             getSuggestionValue={getSuggestionValue}
                             onSuggestionSelected={this.onSuggestionSelected}  //. <-----
-
                             renderSuggestion={renderSuggestion}
                             inputProps={inputProps}
                             onSuggestionSelected={() => {
-                                window.location.reload();
+                                window.location.reload()
+                                window.location.href = "http://localhost:3000/?#/dashboard"
                             }}
                         />
                     </NavItem>
