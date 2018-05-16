@@ -81,7 +81,7 @@ class HeaderLinks extends Component{
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Judges name',
+            placeholder: 'Search by Judge`s Name',
             value,
             onChange: this.onChange,
 
@@ -115,7 +115,7 @@ class HeaderLinks extends Component{
                             inputProps={inputProps}
                             onSuggestionSelected={() => {
                                 window.location.reload()
-                                window.location.href = "http://localhost:3000/?#/dashboard"
+                                window.location.href = "#/dashboard?thomas-durkin"
                             }}
                         />
                     </NavItem>

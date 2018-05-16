@@ -113,7 +113,7 @@ class Login extends Component {
               <Card
                   content={
                     <div className="login">
-                    <Header text="Welcome to Attorney Insider"/>
+                    <Header text="Welcome to Attorney Insider!"/>
                     <Content title=""/>
                     <Footer text=""/>
                   </div>
