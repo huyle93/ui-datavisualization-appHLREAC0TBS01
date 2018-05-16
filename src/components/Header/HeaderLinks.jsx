@@ -105,6 +105,8 @@ class HeaderLinks extends Component{
                     <NavItem eventKey={3} href="#">
                         {/* <i className="fa fa-search"></i> */}
                         <p className="hidden-lg hidden-md">Search</p>
+                        <div style={{display: "-webkit-inline-box"}}>
+                        <i className="fa fa-search search-icon"></i>
                         <Autosuggest
                             suggestions={suggestions}
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -117,7 +119,7 @@ class HeaderLinks extends Component{
                                 window.location.reload()
                                 window.location.href = "#/dashboard?thomas-durkin"
                             }}
-                        />
+                        /></div>
                     </NavItem>
                 </Nav>
                 <Nav pullRight>
